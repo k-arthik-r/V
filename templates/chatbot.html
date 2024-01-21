@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('../static/images/26800.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            /* Adjust the max-width as needed */
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .chat-box {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .chat-box-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-box-header h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .chat-box-header p {
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .chat-box-body {
+            padding: 15px;
+            max-height: 320px;
+            overflow-y: auto;
+        }
+
+        .chat-box-body-receive {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .chat-box-body-receive p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .chat-box-footer {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #ecf0f1;
+        }
+
+        .chat-box-footer input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .chat-box-footer i.send {
+            cursor: pointer;
+            font-size: 20px;
+            color: #3498db;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0px;
+            /* left:20px;  */
+            width: 100%;
+            /* margin-bottom: 40rem; */
+            background: linear-gradient(to right, #006aff, #030064);
+            /* Gradient background */
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .navbar:hover {
+            background: linear-gradient(to right, #004fbd, #03004f);
+            /* Adjusted gradient on hover */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            /* Darker text color for better contrast */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            /* Smooth color transition */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #ffffff;
+            /* Darker text color on hover */
+        }
+
+        .heading {
+            margin-left: 2%;
+            color: #ceefff;
+            font-size: 1.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 class="heading" data-translate>ವೈDHया</h1>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chatbox">
+            <div class="chat-box-header">
+                <h3 data-translate>ChatBot Assistance</h3>
+                <p onclick="unToggleChatbox()"><i class="fa fa-times"></i></p>
+            </div>
+            <div class="chat-box-body" id="chat-box-body">
+                <div class="chat-box-body-receive">
+                    <p data-translate="">Hi, I'm your virtual assistant. How may I help you?</p>
+                </div>
+            </div>
+            <div class="chat-box-footer">
+                <input placeholder="Enter..." type="text" onkeydown="sendMessage(event)" />
+                <i class="send far fa-paper-plane" onclick="sendMessageClick()"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage(event) {
+            if (event.key == 'Enter') {
+                var inputElement = document.querySelector('.chat-box-footer input');
+                var message = inputElement.value.trim();
+                if (message !== '') {
+                    var messageDiv = document.createElement('div');
+                    messageDiv.className = 'chat-box-body-send';
+                    messageDiv.innerHTML = '<p>' + message + '</p>';
+                    var chatBody = document.getElementById('chat-box-body');
+                    chatBody.appendChild(messageDiv);
+                    inputElement.value = '';
+                }
+                fetch('/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        question: message,
+                    }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        var messageDiv = document.createElement('div');
+                        messageDiv.className = 'chat-box-body-receive';
+
+                        // Regular expression to match lines starting with a number followed by a dot and space
+                        const regex = /\b\d+\.\s.*?(?=\n|$)/g;
+
+                        var paragraphs = data['answers'].split('\n\n');
+                        var pointsList = document.createElement('ul');
+
+                        paragraphs.forEach(paragraph => {
+                            // Check if the paragraph contains points (lines starting with a number and dot)
+                            if (paragraph.match(regex)) {
+                                var points = paragraph.match(regex);
+                                points.forEach(point => {
+                                    var li = document.createElement('li');
+                                    li.textContent = point.trim().replace(/^\d+\.\s/, ''); // Remove the number and dot
+                                    pointsList.appendChild(li);
+                                });
+                            } else {
+                                var p = document.createElement('p');
+                                p.textContent = paragraph.trim();
+                                messageDiv.appendChild(p);
+                            }
+                        });
+
+                        // Append the ordered list to the message div if points are found
+                        if (pointsList.childNodes.length > 0) {
+                            messageDiv.appendChild(pointsList);
+                        }
+
+                        var chatBody = document.getElementById('chat-box-body');
+                        chatBody.appendChild(messageDiv);
+                        inputElement.value = '';
+                    })
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

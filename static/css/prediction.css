@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+a{
+  text-decoration: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+body {
+  background-image: url('../images/hospital.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* CSS for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #79ffe4, #008066);
+  padding: 10px 20px;
+}
+
+.navbar:hover {
+  background: linear-gradient(to right, #67d7c1, #016a55);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+
+  /* CSS for the divisions */
+  .left-section,
+  .right-section {
+    
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .left-section {
+    background-color: #ffffff00;
+
+  }
+
+  .container {
+    width: auto;
+    padding: 5%;
+    background-color: #ffffff4f;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group input[type="text"]{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: #ffff;
+    font-size: 16px;
+    padding-left: 20px;
+    border: 1px solid #ebebeb98;
+    
+  }
+
+  /* #textBox {
+    width: 100%;
+    font-weight: bolder;
+    height: 150px;
+    border-radius: 5px;
+    border: #ffff;
+    font-size: 16px;
+    padding-left: 20px;
+    border: 1px solid #ebebeb98;
+    align-items: center;
+    justify-items: center;
+    padding-right: 50px;
+  } */
+
+  .output-box {
+    background-color: white;
+    width: 34rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px 10px 10px;
+    height: 180px;
+    overflow: auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .form-group input[type="submit"] {
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #25beaf;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  .form-group input[type="submit"]:hover {
+    background-color:#007166;
+    text-decoration: none;
+    
+  }
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: right; /* Align the content to the right */
+}
+.heading {
+  margin-left: 2%;
+  color: #004640;
+  font-size: 1.8em;
+}
+.description{
+  margin: 2%;
+  color: #004640;
+  font-size: larger;
+  font-weight: 500;
+
+}
+button {
+  background-color: #0dcaad;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-left: auto;
+  font-size: large;
+}
+button:hover{
+  background-color: #004640;
+}

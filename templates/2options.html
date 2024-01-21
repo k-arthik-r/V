@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/2options.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1 class="heading" data-translate>ವೈDHया</h1>
+    </div>
+    <p class="dashboard-intro" data-translate>
+        Welcome to Vaidhya, your holistic mental wellness platform. Here, you can freely express your thoughts and
+        emotions, receiving personalized support from our empathetic chatbot. Additionally, take our insightful mental
+        health test for a comprehensive self-assessment. Your unique responses guide us in providing tailored guidance
+        on your well-being journey. Embrace a space of understanding and empowerment at Vaidhya, where your mental
+        health is our priority.
+    </p>
+
+    <div class="container">
+        <!-- //////////////////////////////////////////// add link to Description prediction page-->
+        <div class="card">
+            <a href="{{url_for('prediction1')}}">
+                <h2>Give Description</h2>
+                <p>Express your thoughts and emotions. Describe your feelings in detail to receive personalized support
+                    and guidance from our empathetic chatbot, your mental health companion.</p>
+            </a>
+        </div>
+
+        <!-- ////////////////////////////////////////////add link to take test prediction page -->
+        <div class="card">
+            <a href="{{url_for('mcq')}}">
+            <h2>Take test</h2>
+            <p>Take our tailored mental health assessment. Answer thoughtfully to gain insights into your well-being.
+                Your responses guide our support for your mental wellness journey</p></a>
+        </div>
+
+
+    </div>
+    <script src="{{ url_for('static', filename='js/2options.js') }}"></script>
+</body>
+
+</html>

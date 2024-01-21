@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ವೈDHया</title>
+
+    <meta name="description" content="medical advisor ">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <script type="text/javascript" src="/templates/index_files/index.js.download"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          
+          <span class="header__logo-sub">ವೈDHया</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="#home" class="header__link" data-translate> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="#about" class="header__link" data-translate>About </a>
+            </li>
+        
+            <li class="header__link-wrapper">
+              <a href="#services" class="header__link">
+                Services
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="#contact" class="header__link" data-translate> Contact & FAQ's </a>
+            </li>
+            <li class="header__link-wrapper" >
+              <a href="{{url_for('login')}}" class="header__link" id="login" data-translate> LOG IN </a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont">
+            <img src="/templates/index_files/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu">
+            <img src="/templates/index_files/ham-menu-close.svg" alt="hamburger menu close" class="header__main-ham-menu-close d-none">
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="" data-translate> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="" data-translate> About </a>
+            </li>
+            
+          
+            <li class="header__sm-menu-link">
+              <a href="#services" data-translate> services </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="#contact" data-translate> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero" id="home">
+      <div class="home-hero__content">
+        <h1 class="heading-primary" data-translate>Hello, I am ವೈDHया, your AI Doctor here to assist you! </h1>
+        <div class="home-hero__info">
+         
+        </div>
+        <div class="home-hero__cta">
+          <a class="btn btn--bg" href="https://bot.dialogflow.com/119833d1-c780-4981-a66e-5fd7286b4597" data-translate>Appointment</a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main" data-translate>About Me</span>
+         
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title" data-translate>Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para" data-translate>
+                Hey! It's
+                <strong>ವೈDHया</strong>
+                a digital tool designed to provide quick and reliable medical information and guidance. It offers services such as symptom checking, general health advice, first aid instructions, medication information, and even appointment scheduling. Powered by a robust knowledge base and natural language processing, it's accessible through various platforms. However, it's essential to remember that a Medi Bot is not a replacement for professional medical advice and should be used for informational purposes only. Privacy and security of user data are prioritized, and the bot continually updates its knowledge to stay current with medical advancements.    
+              </p>
+          <div class="about__content-skills">
+            <h3 class="about__content-title" data-translate>Tech Stacks</h3>
+            <div class="skills">
+              <div class="skills__skill" data-translate>HTML</div>
+              <div class="skills__skill" data-translate>CSS</div>
+              <div class="skills__skill" data-translate>JavaScript</div>
+              <!-- <div class="skills__skill">Azure</div>
+              <div class="skills__skill">Nodejs</div> -->
+              <div class="skills__skill" data-translate>Python</div>
+              </div>
+          </div>
+        </div>
+      </div>
+ 
+      
+   
+    </section>
+
+    <section id="services" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main" data-translate>Services</span>
+          
+</h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img src="{{ url_for('static', filename='images/chatbot_img.png') }}" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title" data-translate>MEDICAL CHAT BOT
+              
+              <p class="projects__row-content-desc" data-translate>
+                A medical chatbot is an artificial intelligence-powered tool designed to provide users with health information, advice, or guidance. Leveraging vast data repositories and algorithms, these chatbots can assist in symptom assessment, appointment scheduling, and answering health-related queries, enhancing patient care and streamlining healthcare operations. Always consult professionals for serious concerns.
+              </p>
+              <div class="home-hero__cta">
+                <a class="btn btn--bg" href="#" data-translate>CLICK HERE</a>
+              </div>
+             
+            </div>
+          </div>
+          <div class="projects__content">
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img src="{{ url_for('static', filename='images/bot2.png') }}" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title" data-translate>DISEASE PREDICTOR
+                
+                <p class="projects__row-content-desc" data-translate>
+                  A disease predictor is a computational tool that utilizes data analysis and machine learning to forecast the likelihood of an individual contracting a specific illness. By analyzing symptoms, medical history, and other relevant factors, it assists in early detection and preventive measures, though it's not a replacement for professional diagnosis.
+                <div class="home-hero__cta">
+                  <a class="btn btn--bg" href="#" data-translate>CLICK HERE</a>
+                </div>
+               
+              </div>
+            </div>
+          <div class="projects__content">
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img src="{{ url_for('static', filename='images/bot1.png') }}" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title" data-translate>APPOINTMENT BOT
+                
+                <p class="projects__row-content-desc" data-translate>
+                  An appointment bot is an AI-driven virtual assistant designed to schedule, reschedule, or cancel appointments. By automating interactions with users, it streamlines the booking process, reducing administrative tasks and enhancing user experience. Suitable for various industries, it ensures efficient time management and minimizes scheduling conflicts.
+                </p>
+                <div class="home-hero__cta">
+                  <a class="btn btn--bg" href="https://bot.dialogflow.com/119833d1-c780-4981-a66e-5fd7286b4597" data-translate>CLICK HERE</a>
+                </div>
+               
+              </div>
+            </div>
+            
+    </section>
+
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main--lt" data-translate>Contact</span>
+          
+        </h2>
+        <div class="contact__form-container">
+          
+          <form onsubmit="sendEmail(); reset(); return false;" class="contact__form" id="contact-form" >
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name" data-translate>Name</label>
+              <input required="" placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name">
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email" data-translate>Email</label>
+              <input required="" placeholder="Enter Your Email" type="text" class="contact__form-input" name="email" id="email">
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message" data-translate>Message</label>
+              <textarea required="" cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn" data-translate>
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section id="faq" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main--lt" data-translate>Frequently Asked Questions</span>
+        </h2>
+  
+        <div class="wrapper">
+          <div class="faq">
+            <button class="accordion" data-translate>
+              Can people with mental illness recover?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+  
+            <div class="pannel">
+              <p data-translate>
+                "When healing from mental illness, early identification and treatment are of vital importance. Based on
+                the nature of the illness, there are a range of effective treatments available. For any type of treatment,
+                it is essential that the person affected is proactive and fully engaged in their own recovery process.
+                Many people with mental illnesses who are diagnosed and treated respond well, although some might
+                experience a return of symptoms. Even in such cases, with careful monitoring and management of the
+                disorder, it is still quite possible to live a fulfilled and productive life."
+  
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              Where else can I get help?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                Where you go for help will depend on the nature of the problem and/or symptoms and what best fits you.
+                Often, the best place to start is by talking with someone you trust about your concerns, such as a family
+                member, friend, clergy, healthcare provider, or other professionals. Having this social support is
+                essential in healing from mental illness, and you will be able to ask them for referrals or
+                recommendations for trusted mental health practitioners. Search for mental health resources in your area.
+                Secondly, there are people and places throughout Nebraska that provide services to talk, to listen, and to
+                help you on your journey to recovery. Thirdly, many people find peer support a helpful tool that can aid
+                in their recovery. There are a variety of organizations that offer support groups for consumers, their
+                family members, and friends. Some support groups are peer led while others may be led by a mental health
+                professional.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              How can I find a doctor, psychiatrist, psychologist, or counsellor?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                To find a family doctor (general physician), visit the College of Physicians and Surgeons of BC to use
+                their Find a Physician tool. You can also see a family doctor at a local walk-in clinic, though itâ€™s
+                helpful to find a regular doctor if you have ongoing care needs. You can also find a psychiatrist through
+                the College of Physicians and Surgeons of BC. Be aware that you almost always need a doctorâ€™s referral
+                to see a psychiatrist.
+                You can find a registered psychologist through the BC Psychological Association and the College of
+                Psychologists of BC.
+                To find a clinical counsellor, visit the BC Association of Clinical Counsellors.
+                For more on the differences between these service providers, see the article The Right Path for You:
+                Finding your way to and through services in BC from the Finding the Right Help â€“ Navigating the System
+                issue of Visions Journal.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              Where can I go to find therapy
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                Different kinds of therapy are more effective based on the nature of the mental health condition and/or
+                symptoms and the person who has them (for example, children will benefit from a therapist who specializes
+                in childrenâ€™s mental health). However, there are several different types of treatment and therapy that
+                can help.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              What treatment options are available?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                Just as there are different types of medications for physical illness, different treatment options are
+                available for individuals with mental illness. Treatment works differently for different people. It is
+                important to find what works best for you or your child.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              How does it work?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                It is often more realistic and helpful to find out what helps with the issues you face. Talking,
+                counselling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can
+                all help.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="faq">
+            <button class="accordion" data-translate>
+              HWhere can I go to find other local services?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                There are likely plenty of resources that can be used to help you find mental health treatment in your
+                community. These resources can help you find the right therapist, and enable you to better understand
+                viable treatment options and the treatment process.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="faq">
+            <button class="accordion" data-translate>
+              Someone I care about has a brain injury. Where can I find more information?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                A brain injury itself isnâ€™t the same as a mental illness, though someone who experiences a brain injury
+                may also experience mental health problems. These mental health problems may stem from the injury itself
+                or from thoughts around the injury (like feelings of loss, anger, or frustration when quality of life
+                changes). In some cases, mental health challenges may not be related to a brain injury at all. The good
+                news is that mental health problems are treatable, even if you or someone you care about has experienced a
+                brain injury. It may be helpful to find a service provider who is familiar with both brain injuries and
+                mental health.
+                For more information and support, visit the BC Brain Injury Association. You can also find local and
+                regional groups and organizations in BC through the Brain Injury Association of Canada.
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- Add more FAQ items as needed -->
+      </div>
+    </section>
+
+<script>
+  
+  var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+    }
+</script>
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail(){
+          Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "hithendra.bm09@gmail.com",
+    Password : "FBC68986B2853F22C958BF5225EFE29CD859",
+    To : 'vvce21cse0004@vvce.ac.in',
+    From : document.getElementById("email").value,
+    Subject : "New Contact form Enquiry !",
+    Body : "Name: " + document.getElementById("name").value
+            +"<br> Email: " +document.getElementById("email").value
+            // + "<br> Phone no : "+document.getElementById("phone").value
+            +"<br> Message : " +document.getElementById("message").value
+}).then(
+  message => alert("Thank you for contacting us, we will be reaching you soon !")
+);
+        }
+      </script> 
+   
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="./index_files/index.js.download"></script>
+  
+
+</div></div></body></html>
