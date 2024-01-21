@@ -11,8 +11,8 @@ config.read('config.ini')
 app = Flask(__name__)
 openai_client = OpenAI(api_key="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")
 
-translate_api_url = 'http://8a7d-34-87-65-34.ngrok-free.app/'
-chatbot_api_url = 'http://fccb-35-201-201-181.ngrok-free.app/'
+translate_api_url = 'http://49bd-35-201-201-181.ngrok-free.app/'
+chatbot_api_url = 'http://d3b4-34-87-65-34.ngrok-free.app/'
 
 
 
