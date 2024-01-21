@@ -44,14 +44,13 @@ if (localStorage.getItem('targetedLanguage') != 'en') {
 }
 
 
-// function predict2_fun() {
-//     var username = document.getElementById("login-username").value;
-//     var password = document.getElementById("login-password").value;
+function mcqfun1() {
+    var username = document.getElementById("qa1").value;
+    
 
-//     if (!username || !password) {
-//         alert("Username and password are required.");
-//         return false;
-//     }
-
-//     return true;
-// }
+    if (!username || !password) {
+        alert("Username and password are required.");
+        return false;
+    }
+    return true
+}

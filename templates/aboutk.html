@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ವೈDHया</title>
+
+    <meta name="description" content="medical advisor ">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <script type="text/javascript" src="/templates/index_files/index.js.download"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          
+          <span class="header__logo-sub">ವೈDHया</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="#home" class="header__link" data-translate> ಹೋಮ್ </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="#about" class="header__link" data-translate>ಬಗ್ಗೆ </a>
+            </li>
+        
+            <li class="header__link-wrapper">
+              <a href="#services" class="header__link">
+                ಸೇವೆಗಳು
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="#contact" class="header__link" data-translate> ಸಂಪರ್ಕ ಮತ್ತು FAQ ಗಳು </a>
+            </li>
+            <li class="header__link-wrapper" >
+              <a href="{{url_for('login')}}" class="header__link" id="login" data-translate> ಲಾಗಿನ್ ಮಾಡಿ </a>
+            </li>
+          </ul>
+          
+          <div class="header__main-ham-menu-cont">
+            <img src="/templates/index_files/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu">
+            <img src="/templates/index_files/ham-menu-close.svg" alt="hamburger menu close" class="header__main-ham-menu-close d-none">
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="" data-translate> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="" data-translate> About </a>
+            </li>
+            
+          
+            <li class="header__sm-menu-link">
+              <a href="#services" data-translate> services </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="#contact" data-translate> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero" id="home">
+      <div class="home-hero__content">
+        <h1 class="heading-primary" data-translate>ಹಲೋ, ನಾನು ವೈಧ್ಯಾ, ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಿಮ್ಮ AI ವೈದ್ಯರು ಇಲ್ಲಿದ್ದಾರೆ! </h1>
+        <div class="home-hero__info">
+         
+        </div>
+        <div class="home-hero__cta">
+          <a class="btn btn--bg" href="https://bot.dialogflow.com/119833d1-c780-4981-a66e-5fd7286b4597" data-translate>ನೇಮಕಾತಿ</a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main" data-translate>ನನ್ನ ಬಗ</span>
+         
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title" data-translate>ನನ್ನನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para" data-translate>
+                ಹೇ! ಅದರ
+                <strong>ವೈDHया</strong>
+                ತ್ವರಿತ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ವೈದ್ಯಕೀಯ ಮಾಹಿತಿ ಮತ್ತು ಮಾರ್ಗದರ್ಶನವನ್ನು ಒದಗಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಡಿಜಿಟಲ್ ಸಾಧನ. ಇದು ರೋಗಲಕ್ಷಣಗಳ ತಪಾಸಣೆ, ಸಾಮಾನ್ಯ ಆರೋಗ್ಯ ಸಲಹೆ, ಪ್ರಥಮ ಚಿಕಿತ್ಸಾ ಸೂಚನೆಗಳು, ಔಷಧಿ ಮಾಹಿತಿ ಮತ್ತು ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ವೇಳಾಪಟ್ಟಿಯಂತಹ ಸೇವೆಗಳನ್ನು ನೀಡುತ್ತದೆ. ದೃಢವಾದ ಜ್ಞಾನದ ಮೂಲ ಮತ್ತು ನೈಸರ್ಗಿಕ ಭಾಷಾ ಸಂಸ್ಕರಣೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತಿದೆ, ಇದು ವಿವಿಧ ವೇದಿಕೆಗಳ ಮೂಲಕ ಪ್ರವೇಶಿಸಬಹುದಾಗಿದೆ. ಆದಾಗ್ಯೂ, ಮೆಡಿ ಬಾಟ್ ವೃತ್ತಿಪರ ವೈದ್ಯಕೀಯ ಸಲಹೆಗೆ ಬದಲಿಯಾಗಿಲ್ಲ ಮತ್ತು ಮಾಹಿತಿ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ ಬಳಸಬೇಕು ಎಂಬುದನ್ನು ನೆನಪಿಟ್ಟುಕೊಳ್ಳುವುದು ಅತ್ಯಗತ್ಯ. ಬಳಕೆದಾರರ ಡೇಟಾದ ಗೌಪ್ಯತೆ ಮತ್ತು ಸುರಕ್ಷತೆಗೆ ಆದ್ಯತೆ ನೀಡಲಾಗುತ್ತದೆ ಮತ್ತು ವೈದ್ಯಕೀಯ ಪ್ರಗತಿಯೊಂದಿಗೆ ಪ್ರಸ್ತುತವಾಗಿರಲು ಬೋಟ್ ತನ್ನ ಜ್ಞಾನವನ್ನು ನಿರಂತರವಾಗಿ ನವೀಕರಿಸುತ್ತದೆ.
+              </p>
+          <div class="about__content-skills">
+            <h3 class="about__content-title" data-translate>ಟೆಕ್ ಸ್ಟ್ಯಾಕ್‌ಗಳು</h3>
+            <div class="skills">
+              <div class="skills__skill" data-translate>HTML</div>
+              <div class="skills__skill" data-translate>CSS</div>
+              <div class="skills__skill" data-translate>JavaScript</div>
+              <!-- <div class="skills__skill">Azure</div>
+              <div class="skills__skill">Nodejs</div> -->
+              <div class="skills__skill" data-translate>Python</div>
+              </div>
+          </div>
+        </div>
+      </div>
+ 
+      
+   
+    </section>
+
+    <section id="services" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main" data-translate>ಸೇವೆಗಳು</span>
+          
+</h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img src="{{ url_for('static', filename='images/chatbot_img.png') }}" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title" data-translate>ವೈದ್ಯಕೀಯ ಚಾಟ್ ಬಾಟ್
+              
+              <p class="projects__row-content-desc" data-translate>
+                ವೈದ್ಯಕೀಯ ಚಾಟ್‌ಬಾಟ್ ಎಂಬುದು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ-ಚಾಲಿತ ಸಾಧನವಾಗಿದ್ದು, ಬಳಕೆದಾರರಿಗೆ ಆರೋಗ್ಯ ಮಾಹಿತಿ, ಸಲಹೆ ಅಥವಾ ಮಾರ್ಗದರ್ಶನವನ್ನು ಒದಗಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ವ್ಯಾಪಕವಾದ ಡೇಟಾ ರೆಪೊಸಿಟರಿಗಳು ಮತ್ತು ಅಲ್ಗಾರಿದಮ್‌ಗಳನ್ನು ನಿಯಂತ್ರಿಸುವ ಮೂಲಕ, ಈ ಚಾಟ್‌ಬಾಟ್‌ಗಳು ರೋಗಲಕ್ಷಣದ ಮೌಲ್ಯಮಾಪನ, ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ವೇಳಾಪಟ್ಟಿ ಮತ್ತು ಆರೋಗ್ಯ-ಸಂಬಂಧಿತ ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಲು, ರೋಗಿಗಳ ಆರೈಕೆಯನ್ನು ಹೆಚ್ಚಿಸಲು ಮತ್ತು ಆರೋಗ್ಯ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಗಂಭೀರ ಕಾಳಜಿಗಳಿಗಾಗಿ ಯಾವಾಗಲೂ ವೃತ್ತಿಪರರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+              </p>
+              <div class="home-hero__cta">
+                <a class="btn btn--bg" href="#" data-translate>CLICK HERE</a>
+              </div>
+             
+            </div>
+          </div>
+          <div class="projects__content">
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img src="{{ url_for('static', filename='images/bot2.png') }}" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title" data-translate>ರೋಗ ಮುನ್ಸೂಚಕ
+                
+                <p class="projects__row-content-desc" data-translate>
+                  ರೋಗ ಮುನ್ಸೂಚಕವು ಒಂದು ಕಂಪ್ಯೂಟೇಶನಲ್ ಸಾಧನವಾಗಿದ್ದು, ಒಬ್ಬ ವ್ಯಕ್ತಿಯು ನಿರ್ದಿಷ್ಟ ಅನಾರೋಗ್ಯಕ್ಕೆ ಒಳಗಾಗುವ ಸಾಧ್ಯತೆಯನ್ನು ಮುನ್ಸೂಚಿಸಲು ಡೇಟಾ ವಿಶ್ಲೇಷಣೆ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆಯನ್ನು ಬಳಸಿಕೊಳ್ಳುತ್ತದೆ. ರೋಗಲಕ್ಷಣಗಳು, ವೈದ್ಯಕೀಯ ಇತಿಹಾಸ ಮತ್ತು ಇತರ ಸಂಬಂಧಿತ ಅಂಶಗಳನ್ನು ವಿಶ್ಲೇಷಿಸುವ ಮೂಲಕ, ಇದು ವೃತ್ತಿಪರ ರೋಗನಿರ್ಣಯಕ್ಕೆ ಬದಲಿಯಾಗಿಲ್ಲದಿದ್ದರೂ, ಆರಂಭಿಕ ಪತ್ತೆ ಮತ್ತು ತಡೆಗಟ್ಟುವ ಕ್ರಮಗಳಲ್ಲಿ ಸಹಾಯ ಮಾಡುತ್ತದೆ.
+                <div class="home-hero__cta">
+                  <a class="btn btn--bg" href="#" data-translate>CLICK HERE</a>
+                </div>
+               
+              </div>
+            </div>
+          <div class="projects__content">
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img src="{{ url_for('static', filename='images/bot1.png') }}" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title" data-translate>ನೇಮಕಾತಿ ಬೋಟ್
+                
+                <p class="projects__row-content-desc" data-translate>
+                  ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬೋಟ್ ಎನ್ನುವುದು AI-ಚಾಲಿತ ವರ್ಚುವಲ್ ಸಹಾಯಕವಾಗಿದ್ದು, ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್‌ಗಳನ್ನು ನಿಗದಿಪಡಿಸಲು, ಮರುಹೊಂದಿಸಲು ಅಥವಾ ರದ್ದುಗೊಳಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂವಹನವನ್ನು ಸ್ವಯಂಚಾಲಿತಗೊಳಿಸುವ ಮೂಲಕ, ಇದು ಬುಕಿಂಗ್ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸುಗಮಗೊಳಿಸುತ್ತದೆ, ಆಡಳಿತಾತ್ಮಕ ಕಾರ್ಯಗಳನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ ಮತ್ತು ಬಳಕೆದಾರರ ಅನುಭವವನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ. ವಿವಿಧ ಕೈಗಾರಿಕೆಗಳಿಗೆ ಸೂಕ್ತವಾಗಿದೆ, ಇದು ಸಮರ್ಥ ಸಮಯ ನಿರ್ವಹಣೆಯನ್ನು ಖಾತ್ರಿಗೊಳಿಸುತ್ತದೆ ಮತ್ತು ವೇಳಾಪಟ್ಟಿ ಸಂಘರ್ಷಗಳನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ.
+                </p>
+                <div class="home-hero__cta">
+                  <a class="btn btn--bg" href="https://bot.dialogflow.com/119833d1-c780-4981-a66e-5fd7286b4597" data-translate>CLICK HERE</a>
+                </div>
+               
+              </div>
+            </div>
+            
+    </section>
+
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main--lt" data-translate>ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</span>
+          
+        </h2>
+        <div class="contact__form-container">
+          
+          <form onsubmit="sendEmail(); reset(); return false;" class="contact__form" id="contact-form" >
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name" data-translate>ಹೆಸರು</label>
+              <input required="" placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name">
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email" data-translate>ಇಮೇಲ್</label>
+              <input required="" placeholder="Enter Your Email" type="text" class="contact__form-input" name="email" id="email">
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message" data-translate>ಸಂದೇಶ</label>
+              <textarea required="" cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn" data-translate>
+              ಸಲ್ಲಿಸು
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section id="faq" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main--lt" data-translate>ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು</span>
+        </h2>
+  
+        <div class="wrapper">
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ಮಾನಸಿಕ ಅಸ್ವಸ್ಥತೆ ಹೊಂದಿರುವ ಜನರು ಚೇತರಿಸಿಕೊಳ್ಳಬಹುದೇ?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+  
+            <div class="pannel">
+              <p data-translate>
+                "ಮಾನಸಿಕ ಕಾಯಿಲೆಯಿಂದ ಗುಣಪಡಿಸುವಾಗ, ಆರಂಭಿಕ ಗುರುತಿಸುವಿಕೆ ಮತ್ತು ಚಿಕಿತ್ಸೆಯು ಪ್ರಮುಖ ಪ್ರಾಮುಖ್ಯತೆಯನ್ನು ಹೊಂದಿದೆ
+                ಅನಾರೋಗ್ಯದ ಸ್ವರೂಪ, ಹಲವಾರು ಪರಿಣಾಮಕಾರಿ ಚಿಕಿತ್ಸೆಗಳು ಲಭ್ಯವಿದೆ. ಯಾವುದೇ ರೀತಿಯ ಚಿಕಿತ್ಸೆಗಾಗಿ,
+                ಬಾಧಿತ ವ್ಯಕ್ತಿಯು ಪೂರ್ವಭಾವಿಯಾಗಿ ಮತ್ತು ಅವರ ಸ್ವಂತ ಚೇತರಿಕೆಯ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ಸಂಪೂರ್ಣವಾಗಿ ತೊಡಗಿಸಿಕೊಂಡಿರುವುದು ಅತ್ಯಗತ್ಯ.
+                ರೋಗನಿರ್ಣಯ ಮತ್ತು ಚಿಕಿತ್ಸೆ ಪಡೆದ ಮಾನಸಿಕ ಕಾಯಿಲೆಗಳಿರುವ ಅನೇಕ ಜನರು ಉತ್ತಮವಾಗಿ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಾರೆ, ಆದರೂ ಕೆಲವರು ಇರಬಹುದು
+                ರೋಗಲಕ್ಷಣಗಳ ಮರಳುವಿಕೆಯನ್ನು ಅನುಭವಿಸಿ. ಅಂತಹ ಸಂದರ್ಭಗಳಲ್ಲಿ ಸಹ, ಎಚ್ಚರಿಕೆಯಿಂದ ಮೇಲ್ವಿಚಾರಣೆ ಮತ್ತು ನಿರ್ವಹಣೆಯೊಂದಿಗೆ
+                ಅಸ್ವಸ್ಥತೆ, ಪೂರೈಸಿದ ಮತ್ತು ಉತ್ಪಾದಕ ಜೀವನವನ್ನು ನಡೆಸಲು ಇನ್ನೂ ಸಾಕಷ್ಟು ಸಾಧ್ಯವಿದೆ."
+  
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ನಾನು ಬೇರೆಲ್ಲಿ ಸಹಾಯ ಪಡೆಯಬಹುದು?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ನೀವು ಸಹಾಯಕ್ಕಾಗಿ ಎಲ್ಲಿಗೆ ಹೋಗುತ್ತೀರಿ ಎಂಬುದು ಸಮಸ್ಯೆಯ ಸ್ವರೂಪ ಮತ್ತು/ಅಥವಾ ರೋಗಲಕ್ಷಣಗಳ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುತ್ತದೆ ಮತ್ತು ಯಾವುದು ನಿಮಗೆ ಉತ್ತಮವಾಗಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತದೆ.
+                ಸಾಮಾನ್ಯವಾಗಿ, ಕುಟುಂಬದಂತಹ ನಿಮ್ಮ ಕಾಳಜಿಗಳ ಬಗ್ಗೆ ನೀವು ನಂಬುವ ಯಾರೊಂದಿಗಾದರೂ ಮಾತನಾಡುವ ಮೂಲಕ ಪ್ರಾರಂಭಿಸಲು ಉತ್ತಮ ಸ್ಥಳವಾಗಿದೆ
+                ಸದಸ್ಯ, ಸ್ನೇಹಿತ, ಪಾದ್ರಿಗಳು, ಆರೋಗ್ಯ ಪೂರೈಕೆದಾರರು ಅಥವಾ ಇತರ ವೃತ್ತಿಪರರು. ಈ ಸಾಮಾಜಿಕ ಬೆಂಬಲವನ್ನು ಹೊಂದಿರುವುದು
+                ಮಾನಸಿಕ ಅಸ್ವಸ್ಥತೆಯಿಂದ ಗುಣಮುಖವಾಗಲು ಅತ್ಯಗತ್ಯ, ಮತ್ತು ನೀವು ಅವರನ್ನು ಉಲ್ಲೇಖಗಳಿಗಾಗಿ ಅಥವಾ ಕೇಳಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ
+                ವಿಶ್ವಾಸಾರ್ಹ ಮಾನಸಿಕ ಆರೋಗ್ಯ ವೈದ್ಯರಿಗೆ ಶಿಫಾರಸುಗಳು. ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿ ಮಾನಸಿಕ ಆರೋಗ್ಯ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಹುಡುಕಿ.
+                ಎರಡನೆಯದಾಗಿ, ಮಾತನಾಡಲು, ಕೇಳಲು ಮತ್ತು ಕೇಳಲು ಸೇವೆಗಳನ್ನು ಒದಗಿಸುವ ಜನರು ಮತ್ತು ಸ್ಥಳಗಳು ನೆಬ್ರಸ್ಕಾದಾದ್ಯಂತ ಇವೆ
+                ಚೇತರಿಕೆಯ ನಿಮ್ಮ ಪ್ರಯಾಣದಲ್ಲಿ ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಮೂರನೆಯದಾಗಿ, ಅನೇಕ ಜನರು ಪೀರ್ ಬೆಂಬಲವನ್ನು ಸಹಾಯ ಮಾಡುವ ಸಹಾಯಕ ಸಾಧನವನ್ನು ಕಂಡುಕೊಳ್ಳುತ್ತಾರೆ
+                ಅವರ ಚೇತರಿಕೆಯಲ್ಲಿ. ಗ್ರಾಹಕರಿಗೆ ಬೆಂಬಲ ಗುಂಪುಗಳನ್ನು ನೀಡುವ ವಿವಿಧ ಸಂಸ್ಥೆಗಳಿವೆ, ಅವರ
+                ಕುಟುಂಬ ಸದಸ್ಯರು, ಮತ್ತು ಸ್ನೇಹಿತರು. ಕೆಲವು ಬೆಂಬಲ ಗುಂಪುಗಳು ಪೀರ್ ನೇತೃತ್ವವನ್ನು ಹೊಂದಿದ್ದರೆ ಇತರರು ಮಾನಸಿಕ ಆರೋಗ್ಯದಿಂದ ಮುನ್ನಡೆಸಬಹುದು
+                ವೃತ್ತಿಪರ.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ನಾನು ವೈದ್ಯರು, ಮನೋವೈದ್ಯರು, ಮನಶ್ಶಾಸ್ತ್ರಜ್ಞ ಅಥವಾ ಸಲಹೆಗಾರರನ್ನು ಹೇಗೆ ಕಂಡುಹಿಡಿಯಬಹುದು?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ಕುಟುಂಬ ವೈದ್ಯರನ್ನು (ಸಾಮಾನ್ಯ ವೈದ್ಯ) ಹುಡುಕಲು, ಬಳಸಲು BC ಯ ವೈದ್ಯರು ಮತ್ತು ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರ ಕಾಲೇಜಿಗೆ ಭೇಟಿ ನೀಡಿ
+                ಅವರ ವೈದ್ಯ ಸಾಧನವನ್ನು ಹುಡುಕಿ. ನೀವು ಸ್ಥಳೀಯ ವಾಕ್-ಇನ್ ಕ್ಲಿನಿಕ್‌ನಲ್ಲಿ ಕುಟುಂಬ ವೈದ್ಯರನ್ನು ಸಹ ನೋಡಬಹುದು, ಆದರೂ
+                ನೀವು ನಡೆಯುತ್ತಿರುವ ಆರೈಕೆ ಅಗತ್ಯಗಳನ್ನು ಹೊಂದಿದ್ದರೆ ನಿಯಮಿತ ವೈದ್ಯರನ್ನು ಹುಡುಕಲು ಸಹಾಯಕವಾಗಿದೆ. ನೀವು ಮನೋವೈದ್ಯರನ್ನು ಸಹ ಕಂಡುಹಿಡಿಯಬಹುದು
+                BC ಯ ವೈದ್ಯರು ಮತ್ತು ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರ ಕಾಲೇಜು. ನಿಮಗೆ ಯಾವಾಗಲೂ ವೈದ್ಯರ ಉಲ್ಲೇಖದ ಅಗತ್ಯವಿದೆ ಎಂದು ತಿಳಿದಿರಲಿ
+                ಮನೋವೈದ್ಯರನ್ನು ನೋಡಲು.
+                ನೀವು BC ಸೈಕಲಾಜಿಕಲ್ ಅಸೋಸಿಯೇಷನ್ ಮತ್ತು ಕಾಲೇಜ್ ಆಫ್ ಮೂಲಕ ನೋಂದಾಯಿತ ಮನಶ್ಶಾಸ್ತ್ರಜ್ಞರನ್ನು ಕಾಣಬಹುದು
+                ಕ್ರಿ.ಪೂ.ನ ಮನೋವಿಜ್ಞಾನಿಗಳು.
+                ಕ್ಲಿನಿಕಲ್ ಸಲಹೆಗಾರರನ್ನು ಹುಡುಕಲು, BC ಅಸೋಸಿಯೇಶನ್ ಆಫ್ ಕ್ಲಿನಿಕಲ್ ಕೌನ್ಸೆಲರ್‌ಗೆ ಭೇಟಿ ನೀಡಿ.
+                ಈ ಸೇವಾ ಪೂರೈಕೆದಾರರ ನಡುವಿನ ವ್ಯತ್ಯಾಸಗಳ ಕುರಿತು ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ, ಲೇಖನವನ್ನು ನೋಡಿ ನಿಮಗಾಗಿ ಸರಿಯಾದ ಮಾರ್ಗ:
+                ಫೈಂಡಿಂಗ್ ದಿ ರೈಟ್ ಹೆಲ್ಪ್‌ನಿಂದ BC ಯಲ್ಲಿ ಸೇವೆಗಳಿಗೆ ಮತ್ತು ಮೂಲಕ ನಿಮ್ಮ ಮಾರ್ಗವನ್ನು ಕಂಡುಕೊಳ್ಳುವುದು - ಸಿಸ್ಟಮ್ ನ್ಯಾವಿಗೇಟ್ ಮಾಡುವುದು
+                ವಿಷನ್ಸ್ ಜರ್ನಲ್ ಸಂಚಿಕೆ.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ಚಿಕಿತ್ಸೆಯನ್ನು ಕಂಡುಹಿಡಿಯಲು ನಾನು ಎಲ್ಲಿಗೆ ಹೋಗಬಹುದು
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ಮಾನಸಿಕ ಆರೋಗ್ಯ ಸ್ಥಿತಿಯ ಸ್ವರೂಪ ಮತ್ತು/ಅಥವಾ ಆಧಾರದ ಮೇಲೆ ವಿವಿಧ ರೀತಿಯ ಚಿಕಿತ್ಸೆಯು ಹೆಚ್ಚು ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ
+                ರೋಗಲಕ್ಷಣಗಳು ಮತ್ತು ಅವುಗಳನ್ನು ಹೊಂದಿರುವ ವ್ಯಕ್ತಿ (ಉದಾಹರಣೆಗೆ, ಮಕ್ಕಳು ಪರಿಣತಿ ಹೊಂದಿರುವ ಚಿಕಿತ್ಸಕರಿಂದ ಪ್ರಯೋಜನ ಪಡೆಯುತ್ತಾರೆ
+                ಮಕ್ಕಳ ಮಾನಸಿಕ ಆರೋಗ್ಯದಲ್ಲಿ). ಆದಾಗ್ಯೂ, ಹಲವಾರು ರೀತಿಯ ಚಿಕಿತ್ಸೆ ಮತ್ತು ಚಿಕಿತ್ಸೆಗಳಿವೆ
+                ಸಹಾಯ ಮಾಡಬಹುದು.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ಯಾವ ಚಿಕಿತ್ಸಾ ಆಯ್ಕೆಗಳು ಲಭ್ಯವಿದೆ?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ದೈಹಿಕ ಕಾಯಿಲೆಗೆ ವಿವಿಧ ರೀತಿಯ ಔಷಧಿಗಳಿರುವಂತೆಯೇ, ವಿಭಿನ್ನ ಚಿಕಿತ್ಸಾ ಆಯ್ಕೆಗಳಿವೆ
+                ಮಾನಸಿಕ ಅಸ್ವಸ್ಥತೆ ಹೊಂದಿರುವ ವ್ಯಕ್ತಿಗಳಿಗೆ ಲಭ್ಯವಿದೆ. ವಿಭಿನ್ನ ಜನರಿಗೆ ಚಿಕಿತ್ಸೆಯು ವಿಭಿನ್ನವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ. ಇದು
+                ನಿಮಗೆ ಅಥವಾ ನಿಮ್ಮ ಮಗುವಿಗೆ ಯಾವುದು ಉತ್ತಮವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಕಂಡುಹಿಡಿಯುವುದು ಮುಖ್ಯವಾಗಿದೆ.
+              </p>
+            </div>
+          </div>
+          <hr>
+  
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ನೀವು ಎದುರಿಸುತ್ತಿರುವ ಸಮಸ್ಯೆಗಳಿಗೆ ಯಾವುದು ಸಹಾಯ ಮಾಡುತ್ತದೆ ಎಂಬುದನ್ನು ಕಂಡುಹಿಡಿಯಲು ಇದು ಸಾಮಾನ್ಯವಾಗಿ ಹೆಚ್ಚು ವಾಸ್ತವಿಕ ಮತ್ತು ಸಹಾಯಕವಾಗಿರುತ್ತದೆ. ಮಾತನಾಡುವ,
+                ಸಮಾಲೋಚನೆ, ಔಷಧಿ, ಸ್ನೇಹ, ವ್ಯಾಯಾಮ, ಉತ್ತಮ ನಿದ್ರೆ ಮತ್ತು ಪೋಷಣೆ, ಮತ್ತು ಅರ್ಥಪೂರ್ಣ ಉದ್ಯೋಗ
+                ಎಲ್ಲಾ ಸಹಾಯ. 
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ಇತರ ಸ್ಥಳೀಯ ಸೇವೆಗಳನ್ನು ಹುಡುಕಲು ನಾನು ಎಲ್ಲಿಗೆ ಹೋಗಬಹುದು?
+  
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ನಿಮ್ಮಲ್ಲಿ ಮಾನಸಿಕ ಆರೋಗ್ಯ ಚಿಕಿತ್ಸೆಯನ್ನು ಕಂಡುಹಿಡಿಯಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ಬಳಸಬಹುದಾದ ಸಾಕಷ್ಟು ಸಂಪನ್ಮೂಲಗಳಿವೆ
+                 ಸಮುದಾಯ. ಈ ಸಂಪನ್ಮೂಲಗಳು ನಿಮಗೆ ಸರಿಯಾದ ಚಿಕಿತ್ಸಕರನ್ನು ಹುಡುಕಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ಮತ್ತು ನೀವು ಚೆನ್ನಾಗಿ ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ
+                 ಕಾರ್ಯಸಾಧ್ಯವಾದ ಚಿಕಿತ್ಸೆಯ ಆಯ್ಕೆಗಳು ಮತ್ತು ಚಿಕಿತ್ಸೆಯ ಪ್ರಕ್ರಿಯೆ.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="faq">
+            <button class="accordion" data-translate>
+              ನಾನು ಕಾಳಜಿವಹಿಸುವ ಯಾರಿಗಾದರೂ ಮಿದುಳಿನ ಗಾಯವಾಗಿದೆ. ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯನ್ನು ನಾನು ಎಲ್ಲಿ ಕಂಡುಹಿಡಿಯಬಹುದು?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <p data-translate>
+                ಮಿದುಳಿನ ಗಾಯವು ಮಾನಸಿಕ ಅಸ್ವಸ್ಥತೆಯಂತೆಯೇ ಅಲ್ಲ, ಆದರೆ ಮಿದುಳಿನ ಗಾಯವನ್ನು ಅನುಭವಿಸುವ ಯಾರಾದರೂ
+                ಮಾನಸಿಕ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳನ್ನು ಸಹ ಅನುಭವಿಸಬಹುದು. ಈ ಮಾನಸಿಕ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳು ಗಾಯದಿಂದಲೇ ಉಂಟಾಗಬಹುದು
+                ಅಥವಾ ಗಾಯದ ಸುತ್ತಲಿನ ಆಲೋಚನೆಗಳಿಂದ (ಜೀವನದ ಗುಣಮಟ್ಟದಲ್ಲಿ ನಷ್ಟ, ಕೋಪ ಅಥವಾ ಹತಾಶೆಯ ಭಾವನೆಗಳು
+                ಬದಲಾವಣೆಗಳನ್ನು). ಕೆಲವು ಸಂದರ್ಭಗಳಲ್ಲಿ, ಮಾನಸಿಕ ಆರೋಗ್ಯದ ಸವಾಲುಗಳು ಮಿದುಳಿನ ಗಾಯಕ್ಕೆ ಸಂಬಂಧಿಸದೇ ಇರಬಹುದು. ಒಳ್ಳೆಯದು
+                ಸುದ್ದಿ ಏನೆಂದರೆ, ನೀವು ಅಥವಾ ನೀವು ಕಾಳಜಿವಹಿಸುವ ಯಾರಾದರೂ ಅನುಭವಿಸಿದ್ದರೂ ಸಹ ಮಾನಸಿಕ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳಿಗೆ ಚಿಕಿತ್ಸೆ ನೀಡಬಹುದಾಗಿದೆ
+                ಮೆದುಳಿನ ಗಾಯ. ಮಿದುಳಿನ ಗಾಯಗಳು ಮತ್ತು ಎರಡೂ ಪರಿಚಿತವಾಗಿರುವ ಸೇವಾ ಪೂರೈಕೆದಾರರನ್ನು ಹುಡುಕಲು ಇದು ಸಹಾಯಕವಾಗಬಹುದು
+                ಮಾನಸಿಕ ಆರೋಗ್ಯ.
+                ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಮತ್ತು ಬೆಂಬಲಕ್ಕಾಗಿ, BC ಮಿದುಳಿನ ಗಾಯದ ಸಂಘಕ್ಕೆ ಭೇಟಿ ನೀಡಿ. ನೀವು ಸ್ಥಳೀಯ ಮತ್ತು ಕಾಣಬಹುದು
+                ಕೆನಡಾದ ಬ್ರೈನ್ ಇಂಜುರಿ ಅಸೋಸಿಯೇಷನ್ ಮೂಲಕ BC ಯಲ್ಲಿ ಪ್ರಾದೇಶಿಕ ಗುಂಪುಗಳು ಮತ್ತು ಸಂಸ್ಥೆಗಳು.
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- Add more FAQ items as needed -->
+      </div>
+    </section>
+
+<script>
+  
+  var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+    }
+</script>
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail(){
+          Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "hithendra.bm09@gmail.com",
+    Password : "FBC68986B2853F22C958BF5225EFE29CD859",
+    To : 'vvce21cse0004@vvce.ac.in',
+    From : document.getElementById("email").value,
+    Subject : "New Contact form Enquiry !",
+    Body : "Name: " + document.getElementById("name").value
+            +"<br> Email: " +document.getElementById("email").value
+            // + "<br> Phone no : "+document.getElementById("phone").value
+            +"<br> Message : " +document.getElementById("message").value
+}).then(
+  message => alert("Thank you for contacting us, we will be reaching you soon !")
+);
+        }
+      </script> 
+   
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="./index_files/index.js.download"></script>
+  
+
+</div></div></body></html>

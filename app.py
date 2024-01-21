@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from pymongo import MongoClient
 import requests
+import random
 from openai import OpenAI
 from configparser import ConfigParser
 
@@ -10,8 +11,8 @@ config.read('config.ini')
 app = Flask(__name__)
 openai_client = OpenAI(api_key="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")
 
-translate_api_url = 'http://aefc-34-135-70-67.ngrok-free.app/'
-chatbot_api_url = 'http://5184-34-66-153-27.ngrok-free.app/'
+translate_api_url = 'http://8a7d-34-87-65-34.ngrok-free.app/'
+chatbot_api_url = 'http://fccb-35-201-201-181.ngrok-free.app/'
 
 
 
@@ -32,6 +33,10 @@ def dashboard():
 def about():
     return render_template('about.html')
 
+@app.route('/aboutk')
+def aboutk():
+    return render_template('aboutk.html')
+
 @app.route('/diseasePrediction')
 def diseasePrediction():
     return render_template('2options.html')
@@ -48,6 +53,10 @@ def mcq():
 def chatbot():
     return render_template('chatbot.html')
 
+@app.route('/predic')
+def predic():
+    return render_template('predic.html')
+
 @app.route('/ask', methods=['POST'])
 def ask():
     questions = request.get_json().get('question')
@@ -58,6 +67,12 @@ def ask():
     else:
         return jsonify({'error': 'Failed to get answers'})
 
+@app.route('/mcqfun1', methods=["GET", "POST"])
+def mcqfun1():
+    if request.method == "POST":
+        list = ['Depression', 'Anxiety Disorders', 'Schizophrenia', 'Bipolar Disorder', 'Obsessive-Compulsive Disorder (OCD)', 'Post-Traumatic Stress Disorder(PTSD)']
+        symp = random.choices(list)
+    return render_template('predic.html')
 
 @app.route('/translate', methods=['POST'])
 def translate():
