@@ -9,10 +9,10 @@ config = ConfigParser()
 config.read('config.ini')
 
 app = Flask(__name__)
-openai_client = OpenAI(api_key="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")
+openai_client = OpenAI()
 
-translate_api_url = 'http://49bd-35-201-201-181.ngrok-free.app/'
-chatbot_api_url = 'http://d3b4-34-87-65-34.ngrok-free.app/'
+translate_api_url = ''
+chatbot_api_url = ''
 
 
 
