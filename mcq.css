@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-    background-image: url('quiz.jpg'); 
+    background-image: url('./quiz.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
